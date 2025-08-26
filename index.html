@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>J-Vend Solutions | Vending Machines for Businesses in North Carolina</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="J-Vend Solutions provides modern vending machines for businesses in North Carolina. Cashless and cash options, tap-to-pay, and reliable service.">
+  <meta name="keywords" content="vending machines, North Carolina, business vending, cashless vending, tap to pay, Apple Pay, Google Pay, Samsung Pay, Visa, Mastercard, vending services">
+  <meta name="author" content="J-Vend Solutions">
+  <meta property="og:title" content="J-Vend Solutions - Vending Machines for Businesses in North Carolina">
+  <meta property="og:description" content="Modern vending machines for businesses in North Carolina. Cashless and cash options, tap-to-pay, and reliable service.">
+  <meta property="og:image" content="../Assets/Logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta name="robots" content="index, follow">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../Assets/Logo.png">
+  <!-- Montserrat Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: rgb(37,37,38);
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background-color: #0a192f !important;
+      box-shadow: 0 2px 16px 0 #0a192f40;
+      font-family: 'Montserrat', Arial, sans-serif;
+      border-bottom: 1px solid #23243a;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    .navbar .navbar-brand {
+      color: #fff !important;
+      font-weight: 700;
+      font-size: 1.35rem;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .navbar .navbar-brand img {
+      margin-right: 8px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px #0a192f60;
+    }
+    .navbar .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      font-size: 1.08rem;
+      letter-spacing: 0.5px;
+      margin-left: 18px;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .navbar .nav-link.active,
+    .navbar .nav-link:hover {
+      color: #ffdd33 !important;
+      text-shadow: 0 2px 8px #ffdd3380;
+    }
+    .navbar .nav-link.active::after,
+    .navbar .nav-link:hover::after {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #ffdd33;
+      margin: 4px auto 0 auto;
+      border-radius: 2px;
+    }
+    .navbar-toggler {
+      border: none;
+      background: transparent;
+      color: #ffdd33 !important;
+    }
+    .hero-section {
+      background-image:
+        linear-gradient(to bottom, rgba(10,25,47,0.7) 0%, rgba(10,25,47,0.7) 100%),
+        linear-gradient(to bottom, rgba(37,37,38,0) 85%, rgba(37,37,38,1) 100%),
+        url('https://images.unsplash.com/photo-1585341840941-98553e474d84?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      min-height: 60vh;
+      background-color: rgb(37,37,38);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+      /* Make CTA cards pop */
+      .cta-card {
+        border: 2px solid #ffdd33;
+        box-shadow: 0 0 24px 0 #ffdd3380, 0 2px 8px rgba(10,25,47,0.7);
+        transition: transform 0.2s cubic-bezier(.4,2,.3,1), box-shadow 0.2s;
+        position: relative;
+        overflow: hidden;
+        animation: popIn 0.7s cubic-bezier(.4,2,.3,1);
+  min-height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    @media (max-width: 768px) {
+      .cta-card {
+        min-height: 0;
+        padding: 2rem 1rem;
+      }
+      .hero-section {
+        min-height: 40vh;
+        padding: 2rem 0;
+      }
+      .why-choose-us {
+        padding: 2rem 0 !important;
+      }
+      section, .container {
+        margin-bottom: 2.5rem !important;
+      }
+      .get-started-section {
+        margin-bottom: 0 !important;
+      }
+    }
+      .cta-card:hover {
+        transform: scale(1.07) translateY(-6px);
+        box-shadow: 0 0 36px 0 #ffdd33cc, 0 4px 16px rgba(10,25,47,0.8);
+        z-index: 2;
+        background: rgba(255,255,255,0.13);
+      }
+      @keyframes popIn {
+        0% { opacity: 0; transform: scale(0.8) translateY(30px); }
+        80% { opacity: 1; transform: scale(1.05) translateY(-4px); }
+        100% { opacity: 1; transform: scale(1) translateY(0); }
+      }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+  <img src="../Assets/Logo.png" alt="J-Vend Solutions Logo - Vending Machines North Carolina" width="40" height="40" class="d-inline-block align-text-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#footer">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section class="hero-section d-flex align-items-center justify-content-center" style="height: 60vh;">
+    <div class="text-center w-100">
+  <img src="../Assets/Logo.png" alt="Logo" style="width:200px; height:200px; object-fit:contain; background:rgba(0,0,0,0.0);" class="mx-auto d-block mb-3">
+  <h2 id="tagline" style="color:#ffdd33; font-weight:700; font-family:'Montserrat', Arial, sans-serif; text-shadow:0 0 16px #ffdd33, 0 2px 8px rgba(10,25,47,0.7); letter-spacing:1px; min-height:2.5em;"></h2>
+    </div>
+  </section>
+  <!-- Closure Section: Ready to Get Started? -->
+  <!-- Page content here -->
+  <!-- Services Section -->
+  <section id="services" class="py-5" style="background:#181a2a;">
+    <div class="container">
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-8 text-center">
+          <h2 class="mb-3" style="color:#ffdd33; font-family:'Montserrat', Arial, sans-serif; font-weight:700; font-size:2.3rem; letter-spacing:1px; text-shadow:0 2px 12px #0a192f80;">Our Services</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-12">
+          <div class="card shadow-lg border-0" style="background:#23243a; border-radius:18px; overflow:hidden;">
+            <div class="row g-0 align-items-center">
+              <div class="col-md-5 col-12 text-center p-4">
+                <img src="https://media.gettyimages.com/id/1355467032/photo/a-woman-uses-a-vending-machine-to-buy-food-and-drink-on-the-street-in-valencia-spain.jpg?s=612x612&w=0&k=20&c=trSAnn9evJnTcgECMJF4eYlDpBLLF4hqneq7FyvPdvM=" alt="Woman using vending machine in North Carolina business" style="width:100%; max-width:220px; border-radius:12px; box-shadow:0 0 16px #0a192f80; margin-bottom:12px;">
+                <div class="d-flex justify-content-center align-items-center gap-2" style="font-size:2em; margin-top:8px;">
+                  <img src="https://www.svgrepo.com/show/452157/apple-pay.svg" alt="Apple Pay" style="height:28px;" title="Apple Pay">
+                  <img src="https://www.svgrepo.com/show/353822/google-pay-icon.svg" alt="Google Pay" style="height:28px;" title="Google Pay">
+                  <img src="https://www.svgrepo.com/show/342187/samsung-pay.svg" alt="Samsung Pay" style="height:28px;" title="Samsung Pay">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" style="height:28px;" title="Visa">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" style="height:28px;" title="Mastercard">
+                </div>
+              </div>
+              <div class="col-md-7 col-12 p-4">
+                <h3 style="color:#ffdd33; font-family:'Montserrat', Arial, sans-serif; font-weight:600; font-size:1.45rem; margin-bottom:12px;">Modern Vending Machines</h3>
+                <p style="color:#fff; font-size:1.13rem; font-family:'Montserrat', Arial, sans-serif; opacity:0.92; line-height:1.7; margin-bottom:10px;">
+                  Experience the future of vending with our state-of-the-art machines, designed for convenience and reliability.
+                </p>
+                <ul style="color:#fff; font-size:1.05rem; font-family:'Montserrat', Arial, sans-serif; opacity:0.88; margin-bottom:0; padding-left:1.2em;">
+                  <li>Cashless and cash payment options</li>
+                  <li>Tap-to-pay with Apple Pay, Google Pay, Samsung Pay, Visa, Mastercard</li>
+                  <li>Fast, secure transactions</li>
+                  <li>Easy-to-use interface</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CTA Section -->
+  <section class="cta-section py-5" style="background:#23243a;">
+    <div class="container">
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-8 text-center">
+          <h2 class="mb-3" style="color:#ffdd33; font-family:'Montserrat', Arial, sans-serif; font-weight:700; font-size:2.3rem; letter-spacing:1px;">Are you one of these?</h2>
+          <p style="color:#fff; font-size:1.15rem; font-family:'Montserrat', Arial, sans-serif; opacity:0.85;">We serve organizations that value convenience, reliability, and quality vending solutions.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center g-4">
+        <div class="col-md-3 col-12">
+          <div class="cta-card p-4 rounded shadow-sm h-100 d-flex flex-column align-items-center" style="background:rgba(255,255,255,0.07);">
+              <!-- ...SVG removed from Hospitals card... -->
+            <span style="color:#fff; font-size:1.2em; font-family:'Montserrat', Arial, sans-serif; font-weight:600;">Hospitals</span>
+          </div>
+        </div>
+        <div class="col-md-3 col-12">
+          <div class="cta-card p-4 rounded shadow-sm h-100 d-flex flex-column align-items-center" style="background:rgba(255,255,255,0.07);">
+              <!-- ...SVG removed from Schools card... -->
+            <span style="color:#fff; font-size:1.2em; font-family:'Montserrat', Arial, sans-serif; font-weight:600;">Schools</span>
+          </div>
+        </div>
+        <div class="col-md-3 col-12">
+          <div class="cta-card p-4 rounded shadow-sm h-100 d-flex flex-column align-items-center" style="background:rgba(255,255,255,0.07);">
+              <!-- ...SVG removed from Businesses card... -->
+            <span style="color:#fff; font-size:1.2em; font-family:'Montserrat', Arial, sans-serif; font-weight:600;">Businesses</span>
+          </div>
+        </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+          <!-- Contact button removed as requested -->
+  <!-- ...existing code... -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-us py-5" style="background:#0a192f;">
+    <div class="container">
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-8 text-center">
+          <h2 class="mb-3" style="color:#ffdd33; font-family:'Montserrat', Arial, sans-serif; font-weight:700; font-size:2.2rem; letter-spacing:1px;">Why Choose Us?</h2>
+          <p style="color:#fff; font-size:1.15rem; font-family:'Montserrat', Arial, sans-serif; opacity:0.85;">Discover the advantages of partnering with J-Vend Solutions for your vending needs.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center g-4">
+        <div class="col-md-3 col-12">
+          <div class="cta-card p-4 rounded shadow-sm h-100 d-flex flex-column align-items-center" style="background:rgba(255,255,255,0.13);">
+            <i class="bi bi-shield-check" style="font-size:2em; color:#ffdd33;"></i>
+            <span style="color:#ffdd33; font-size:1.1em; font-family:'Montserrat', Arial, sans-serif; font-weight:600; margin-top:10px;">Reliability</span>
+            <p style="color:#fff; font-size:0.98em; opacity:0.85; margin-top:8px; min-height:48px; text-align:center;">Always stocked and serviced for uninterrupted convenience.<br><span style="display:block; margin-top:6px; opacity:0.7;">Fast response for any issues.</span></p>
+          </div>
+        </div>
+        <div class="col-md-3 col-12">
+          <div class="cta-card p-4 rounded shadow-sm h-100 d-flex flex-column align-items-center" style="background:rgba(255,255,255,0.13);">
+            <i class="bi bi-person-heart" style="font-size:2em; color:#ffdd33;"></i>
+            <span style="color:#ffdd33; font-size:1.1em; font-family:'Montserrat', Arial, sans-serif; font-weight:600; margin-top:10px;">Customer Support</span>
+            <p style="color:#fff; font-size:0.98em; opacity:0.85; margin-top:8px; min-height:48px; text-align:center;">Friendly, responsive service for every need.<br><span style="display:block; margin-top:6px; opacity:0.7;">Dedicated support team and easy contact options.</span></p>
+          </div>
+        </div>
+        <div class="col-md-3 col-12">
+          <div class="cta-card p-4 rounded shadow-sm h-100 d-flex flex-column align-items-center" style="background:rgba(255,255,255,0.13);">
+            <i class="bi bi-box-seam" style="font-size:2em; color:#ffdd33;"></i>
+            <span style="color:#ffdd33; font-size:1.1em; font-family:'Montserrat', Arial, sans-serif; font-weight:600; margin-top:10px;">Product Variety</span>
+            <p style="color:#fff; font-size:0.98em; opacity:0.85; margin-top:8px; min-height:48px; text-align:center;">Wide selection of snacks and beverages.<br><span style="display:block; margin-top:6px; opacity:0.7;">Customizable options to fit your organization’s needs.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div style="height:18px;"></div>
+  <!-- Footer Section -->
+  <footer id="footer" class="mt-5 pt-4 pb-3" style="background:#0a192f; color:#fff; font-family:'Montserrat', Arial, sans-serif;">
+  <!-- Closure Section: Ready to Get Started? -->
+  <section class="get-started-section py-5" style="background:#ffdd33; color:#0a192f;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="mb-3" style="font-family:'Montserrat', Arial, sans-serif; font-weight:700; font-size:2.2rem; letter-spacing:1px;">Ready to Get Started?</h2>
+          <p style="font-size:1.15rem; font-family:'Montserrat', Arial, sans-serif; opacity:0.9;">Experience the convenience and reliability of J-Vend Solutions. Reach out today and let us handle your vending needs!</p>
+          <div class="mt-4">
+            <span class="arrow-animate" style="display:inline-block; animation:arrowBounce 1.2s infinite;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 5v14M12 19l-7-7M12 19l7-7" stroke="#0a192f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="arrow-animate" style="display:inline-block; animation:arrowBounce 1.2s infinite 0.3s;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 5v14M12 19l-7-7M12 19l7-7" stroke="#0a192f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      @keyframes arrowBounce {
+        0%, 100% { transform: translateY(0); opacity: 1; }
+        50% { transform: translateY(18px); opacity: 0.7; }
+      }
+    </style>
+  </section>
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-12 text-center mb-3 mb-md-0">
+            <img src="../Assets/Logo.png" alt="Logo" style="width:80px; height:80px; object-fit:contain; background:rgba(0,0,0,0.0); margin-bottom:8px;">
+          <p class="mb-2" style="opacity:0.85; font-size:1.1em; color:#e0e0e0;">Providing reliable vending solutions for organizations.</p>
+          <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3" style="font-size:1.05em;">
+            <span class="d-flex align-items-center" style="gap:8px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffdd33" class="bi bi-envelope" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.708 2.825L15 11.8V5.383zm-.034 7.434-5.482-3.29L8 10.583l-.484-.056-5.482 3.29A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.183zM1 11.8l4.708-2.592L1 5.383V11.8z"/></svg>
+              <span>Email: <a href="mailto:Jvendsolutions@gmail.com" style="color:#ffdd33; text-decoration:none; font-weight:500;">Jvendsolutions@gmail.com</a></span>
+            </span>
+            <span class="d-flex align-items-center" style="gap:8px;">
+              <i class="bi bi-telephone-fill" style="font-size:20px; color:#ffdd33;"></i>
+              <span>Phone: <a href="tel:3363804948" style="color:#ffdd33; text-decoration:none; font-weight:500;">336-380-4948</a></span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center" style="font-size:0.95em; opacity:0.7;">
+          &copy; 2025 J-Vend Solutions. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<script>
+
+const taglines = [
+  "Always stocked. Always ready.",
+  "Reliability you can count on.",
+  "Your vending, our passion.",
+  "Refresh. Refill. Repeat.",
+  "Service that never sleeps."
+];
+const taglineElem = document.getElementById("tagline");
+let idx = 0;
+let typing = true;
+let blankChar = "\u00A0"; // non-breaking space
+let taglineIdx = 0;
+
+function typeTagline() {
+  const currentTagline = taglines[taglineIdx];
+  if (typing) {
+    if (idx <= currentTagline.length) {
+      taglineElem.textContent = currentTagline.slice(0, idx);
+      idx++;
+      setTimeout(typeTagline, 80);
+    } else {
+      typing = false;
+      setTimeout(typeTagline, 1200);
+    }
+  } else {
+    if (idx > 0) {
+      taglineElem.textContent = currentTagline.slice(0, idx - 1);
+      idx--;
+      setTimeout(typeTagline, 40);
+    } else {
+      taglineElem.textContent = blankChar;
+      typing = true;
+      taglineIdx = (taglineIdx + 1) % taglines.length;
+      setTimeout(typeTagline, 600);
+    }
+  }
+}
+typeTagline();
+</script>
+</body>
+</html>
